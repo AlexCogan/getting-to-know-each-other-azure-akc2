@@ -40,8 +40,10 @@ function handleclick()
 		difference=Math.abs (AlexResponses [i]-intresponse);
 		TotalScore+=difference;
 		TotalWeightedScore+=difference*weights [i];
-		text += ("The compatability score for prompt " + (i+1) + " is " + (difference) + "<br>");
-		text += ("The weighted compatability score for prompt " + (i+1) + " is " + (difference*weights [i]) + "<br>");
+		text += ("The compatability score for prompt " + (i+1) + " is " 
+		+ (difference) + "<br>");
+		text += ("The weighted compatability score for prompt " + (i+1) 
+		+ " is " + (difference*weights [i]) + "<br>");
 		eval('document.getElementById("result' + (i+1) + '").innerHTML = text');
 	}
 	PercentScore=100-TotalWeightedScore
@@ -111,8 +113,10 @@ body {background-color:#FFFFFF}
 
 <h1>Matchmaker</h1>
 <p> In this short game, you will be presented a series of statements. <br>
-Answer with a number from 1 to 5, with 1 being that you strongly disagree, and 5 being that you strongly agree. <br>
-At the end, you will be given a compatability score with yours truly, the creator of this program. Good luck!<br>
+Answer with a number from 1 to 5, with 1 being that you strongly disagree, and 5 being that 
+you strongly agree. <br>
+At the end, you will be given a compatability score with yours truly, the creator of this 
+program. Good luck!<br>
 <br></p>
 
 <p id="questions"></p>
